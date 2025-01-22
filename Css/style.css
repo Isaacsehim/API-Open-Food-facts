@@ -1,0 +1,150 @@
+/* Corps général */
+body {
+	background-color: #F9FAFB; /* Fond clair */
+	font-family: 'Poppins', sans-serif;
+	margin: 0;
+	padding: 0;
+  }
+  
+  /* Header */
+  header {
+	background-color: #00C6AE;
+	color: #fff;
+	padding: 2rem;
+	text-align: center;
+	border-bottom-left-radius: 2rem;
+	border-bottom-right-radius: 2rem;
+  }
+  
+  /* Barre de recherche */
+  .barreDeRecherche {
+	background-color: #fff;
+	border-radius: 2rem;
+	padding: 1.5rem;
+	margin: 2rem auto;
+	width: 90%;
+	max-width: 40rem;
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .barreDeRecherche input {
+	width: 70%;
+	padding: 1rem;
+	border: none;
+	border-radius: 1rem;
+	margin-right: 1rem;
+	background-color: #F1F3F5;
+	font-size: 1rem;
+  }
+  
+  .barreDeRecherche button {
+	background-color: #00C6AE;
+	color: white;
+	border: none;
+	border-radius: 1rem;
+	padding: 1rem 1.5rem;
+	font-size: 1rem;
+	cursor: pointer;
+	transition: transform 0.3s ease, background-color 0.3s ease;
+  }
+  
+  .barreDeRecherche button:hover {
+	background-color: #00B39A;
+	transform: scale(1.05);
+  }
+  
+.nomProduit {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+
+  /* Bloc des informations */
+  .informations {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	background-color: #fff;
+	border-radius: 1.5rem;
+	padding: 2rem;
+	margin: 2rem auto;
+	width: 90%;
+	max-width: 50rem;
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+
+.photoProduit {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+  }
+
+  .informations h2 {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-weight: bold;
+	color: #333;
+	font-weight: 600;
+	font-size: 1.2rem;
+	margin-bottom: 1rem;
+  }
+  
+  .informations p {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		font-weight: initial;
+		color: #333;
+		font-size: 1rem;
+		margin-bottom: 1rem;
+	  }
+
+  .informations img {
+	max-width: 100%;
+	border-radius: 1rem;
+  }
+  
+#novascore {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+  /* Footer */
+  footer {
+	background-color: #00C6AE;
+	color: #fff;
+	padding: 2rem;
+	text-align: center;
+	border-top-left-radius: 2rem;
+	border-top-right-radius: 2rem;
+	box-shadow: 4px 1px 1px 0px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Responsiveness */
+  @media (min-width: 768px) {
+
+	.informations {
+	  display: flex;
+	  justify-content: space-around;
+	  align-items: center;
+	  text-align: left;
+	  padding: 2.5rem;
+	}
+  
+	.photoProduit img {
+	  max-width: 80%;
+	}
+  
+	.nomProduit {
+	  flex: 2;
+	}
+  }
+  
