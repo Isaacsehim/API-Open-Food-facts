@@ -1,9 +1,13 @@
+*{
+	padding: 0;
+}
 /* Corps général */
 body {
-	background-color: #F9FAFB; /* Fond clair */
+	background-color: #F9FAFB;
 	font-family: 'Poppins', sans-serif;
 	margin: 0;
 	padding: 0;
+	height: 100%;
   }
   
   /* Header */
@@ -69,8 +73,8 @@ body {
 	text-align: center;
 	background-color: #fff;
 	border-radius: 1.5rem;
-	padding: 2rem;
 	margin: 2rem auto;
+	margin-bottom: 4rem;
 	width: 90%;
 	max-width: 50rem;
 	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -89,7 +93,6 @@ body {
 	align-items: center;
 	font-weight: bold;
 	color: #333;
-	font-weight: 600;
 	font-size: 1.2rem;
 	margin-bottom: 1rem;
   }
@@ -107,7 +110,6 @@ body {
 
   .informations img {
 	max-width: 100%;
-	border-radius: 1rem;
   }
   
 #novascore {
@@ -118,15 +120,20 @@ body {
 }
 
   /* Footer */
-  footer {
+footer {
+
 	background-color: #00C6AE;
 	color: #fff;
-	padding: 2rem;
 	text-align: center;
+	height: 4rem;
 	border-top-left-radius: 2rem;
 	border-top-right-radius: 2rem;
 	box-shadow: 4px 1px 1px 0px rgba(0, 0, 0, 0.1);
-  }
+	position: fixed;
+	width: 83%;
+	bottom: 0;
+	left: 8.5%;
+	}
   
   /* Responsiveness */
   @media (min-width: 768px) {
