@@ -5,25 +5,45 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-  <title>API Open Food Facts</title>
+  
+  <title>KéCeucé</title>
   <link rel="stylesheet" href="Css/style.css">
 </head>
 
 <body>
   <header>
-    <h1>API Open Food Facts</h1>
+    <h1>KéCeuCé</h1>
   </header>
   <main>
     <div class="barreDeRecherche">
       <form action="" method="">
         <input type="text" name="product" placeholder="N° de code-barre">
         <button type="submit" name="">✔</button>
+        <button onclick="location.href='../../index.html';" name="revenir" class="revenir">║█║▌</button>
       </form>
     </div>
 
     <div class="informations" id="informations">
       <div class="nomProduit" id="nomProduit">
-        <!-- <h1>Produit</h1> -->
+        <div class="wrapper" id="wrapper">
+          <section class="container" id="demo-content">
+            <div>
+              <h5>Veuillez Scanner un produit</h5>
+              <a class="button" id="startButton">Commencer à scanner</a>
+              <a class="button" id="resetButton">Réinitialiser</a>
+            </div>
+            <div>
+              <video id="video"></video>
+            </div>
+            <div id="sourceSelectPanel" >
+              <label for="sourceSelect">Changer la source video : </label>
+              <select class="sourceSelect" id="sourceSelect"> </select>
+            </div>
+            <label class="resultat">Resultat du scan </label>
+            <pre><code id="result"></code></pre>
+          </section>
+          <!-- <h1>Produit</h1> -->
+        </div>
       </div>
       <!-- <div class="photoProduit" id="photoProduit">
         <img src="img/" alt="photoproduitscanner">
@@ -59,8 +79,9 @@
       <div class="greenscore" id="greenscore">
         <img src="img/Green/" alt="PhotoGreenscore"></img>
         <p></p>
-      </div>
-    </div> -->
+    </div>
+  </div> -->
+</div>
   </main>
   <footer>
     <div class="bluesky" id="bluesky">
@@ -72,10 +93,11 @@
     <div class="pinterest" id="pinterest">
       <img src="img/LogoRS/icons8-pinterest.svg" alt="Pinterest"></img>
     </div>
-    <p>API Open Food Facts ©</p>
+    <p>Powered by API Open Food Facts ©</p>
   </footer>
 
   <script src="Assets/script.js"></script>
+  <script type="text/javascript" src="https://unpkg.com/@zxing/library@latest/umd/index.min.js"></script>
 </body>
 
 </html>

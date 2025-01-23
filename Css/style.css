@@ -1,6 +1,7 @@
-*{
+* {
 	padding: 0;
 }
+
 /* Corps général */
 body {
 	background-color: #232323;
@@ -8,10 +9,10 @@ body {
 	margin: 0;
 	padding: 0;
 	height: 100%;
-  }
-  
-  /* Header h1 */
-  h1 {
+}
+
+/* Header h1 */
+h1 {
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -23,19 +24,20 @@ body {
 	text-align: center;
 	border-bottom-left-radius: 2rem;
 	border-bottom-right-radius: 2rem;
-  }
-  /* nomProduit */
-  h2 {
+}
+
+/* nomProduit */
+h2 {
 	color: #fff;
 	text-align: center;
 	background-color: #3FCC7D;
 	margin: 0;
 	padding: 1rem;
 	border-radius: 1rem;
-  }
+}
 
-  /* Barre de recherche */
-  .barreDeRecherche {
+/* Barre de recherche */
+.barreDeRecherche {
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -43,33 +45,34 @@ body {
 	padding: 1.5rem;
 	margin: 2rem auto;
 	max-width: 40rem;
-  }
-  
-  .barreDeRecherche input {
+}
+
+.barreDeRecherche input {
 	padding: 1rem;
 	border: none;
 	border-radius: 1rem;
 	margin-right: 1rem;
 	background-color: #323232;
 	font-size: 1rem;
-  }
-  
-  .barreDeRecherche button {
+}
+
+.barreDeRecherche button {
 	background-color: #3FCC7D;
 	color: white;
 	border: none;
 	border-radius: 1rem;
 	padding: 1rem 1.5rem;
 	font-size: 1rem;
+	min-height: 3.3rem;
 	cursor: pointer;
 	transition: transform 0.3s ease, background-color 0.3s ease;
-  }
-  
-  .barreDeRecherche button:hover {
+}
+
+.barreDeRecherche button:hover {
 	background-color: #2eb468;
 	transform: scale(1.05);
-  }
-  
+}
+
 .nomProduit {
 	color: #fff;
 	display: flex;
@@ -78,34 +81,94 @@ body {
 	text-align: center;
 }
 
-  /* Bloc des informations */
-  .informations {
+.container a {
+
+	background-color: #3FCC7D;
+	color: white;
+	border: none;
+	border-radius: 1rem;
+	padding: 1rem;
+	margin: 1rem;
+	font-size: 1rem;
+	cursor: pointer;
+	transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.container a:hover {
+	background-color: #2eb468;
+	transform: scale(1.05);
+}
+
+.container h5 {
+    color: #3FCC7D;
+    font-size: 1.2rem;
+    text-align: center;
+    margin: 2rem 0 2rem 0;
+}
+
+video {
+	padding: 3rem;
+	margin-top: 2rem;
+	width: 60%;
+	height: 40%;
+	border-radius: 1rem;
+	border: 1px solid #3FCC7D;
+	background-color: #232323;
+}
+
+/* Bloc des sources */
+.sourceSelect {
+	display: flex;
+	padding: 1rem 1rem;
+	border: none;
+	border-radius: 1rem;
+	background-color: #232323;
+	color: #fff;
+	font-size: 1rem;
+	margin: 1rem auto;
+}
+
+.resultat {
+	margin: 2rem;
+	padding: 1rem;
+}
+
+#result {
+color: #3FCC7D;
+
+}
+
+label {
+
+}
+
+/* Bloc des informations */
+.informations {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 	text-align: center;
-	background-color: #323232;;
+	background-color: #323232;
 	border-radius: 1.5rem;
 	margin: 2rem auto;
 	margin-bottom: 4rem;
 	width: 90%;
 	max-width: 50rem;
 	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  }
-  
+}
 
 .photoProduit {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-  }
+}
 
 .photoProduit img {
 	border-radius: 1rem;
 }
 
-  .informations h2 {
+.informations h2 {
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -113,9 +176,9 @@ body {
 	color: #fff;
 	font-size: 1.2rem;
 	margin-bottom: 1rem;
-  }
+}
 
-  .informations h3 {
+.informations h3 {
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -123,24 +186,24 @@ body {
 	color: #fff;
 	font-size: 1.2rem;
 	margin-bottom: 1rem;
-  }
-  
-  .informations p {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		text-align: center;
-		font-weight: initial;
-		color: #fff;
-		font-size: 1rem;
-		margin-bottom: 1rem;
-	  }
+}
 
-  .informations img {
+.informations p {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	font-weight: initial;
+	color: #fff;
+	font-size: 1rem;
+	margin-bottom: 1rem;
+}
+
+.informations img {
 	max-width: 100%;
-  }
+}
 
-  /* Footer */
+/* Footer */
 footer {
 	display: flex;
 	justify-content: space-around;
@@ -157,35 +220,35 @@ footer {
 	width: 90%;
 	bottom: 0;
 	left: 5%;
-	}
-  
+}
+
 footer img {
+	max-width: 2.5rem;
 	cursor: pointer;
 	transition: transform 0.3s ease;
-  }
+}
 
 footer img:hover {
 	transform: scale(1.1);
-  }
+}
 
 
-  /* Responsiveness */
-  @media (min-width: 768px) {
+/* Responsiveness */
+@media (min-width: 768px) {
 
 	.informations {
-	  display: flex;
-	  justify-content: space-around;
-	  align-items: center;
-	  text-align: left;
-	  padding: 2.5rem;
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+		text-align: left;
+		padding: 2.5rem;
 	}
-  
+
 	.photoProduit img {
-	  max-width: 80%;
+		max-width: 80%;
 	}
-  
+
 	.nomProduit {
-	  flex: 2;
+		flex: 2;
 	}
-  }
-  
+}

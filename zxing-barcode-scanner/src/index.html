@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ZXing TypeScript | Decoding from camera stream</title>
+  <link rel="stylesheet" rel="preload" as="style" onload="this.rel='stylesheet';this.onload=null"
+    href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
+  <link rel="stylesheet" rel="preload" as="style" onload="this.rel='stylesheet';this.onload=null"
+    href="https://unpkg.com/normalize.css@8.0.0/normalize.css">
+  <link rel="stylesheet" rel="preload" as="style" onload="this.rel='stylesheet';this.onload=null"
+    href="https://unpkg.com/milligram@1.3.0/dist/milligram.min.css">
+</head>
+<body>
+  <main class="wrapper" style="padding-top:2em">
+    <section class="container" id="demo-content">
+      <p>
+        <a class="button-small button-outline" href="../../index.html">HOME 🏡</a>
+      </p>
+      <div>
+        <a class="button" id="startButton">Start</a>
+        <a class="button" id="resetButton">Reset</a>
+      </div>
+      <div>
+        <video id="video" width="300" height="200" style="border: 1px solid gray"></video>
+      </div>
+      <div id="sourceSelectPanel" style="display:none">
+        <label for="sourceSelect">Changer la source video :</label>
+        <select id="sourceSelect" style="max-width:400px">
+        </select>
+      </div>
+      <label>Result:</label>
+      <pre><code id="result"></code></pre>
+    </section>
+  </main>
+  <script type="text/javascript" src="https://unpkg.com/@zxing/library@latest/umd/index.min.js"></script>
+  <script src="index.js" defer></script>
+</body>
+</html>

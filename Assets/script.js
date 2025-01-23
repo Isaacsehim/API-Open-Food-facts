@@ -1,7 +1,9 @@
+// Récupérer les paramètres d'URL
 const urlParams = new URLSearchParams(window.location.search);
 let product = urlParams.get('product');
-let url = 'https://world.openfoodfacts.org/api/v2/product/' + product;
+let result = urlParams.get('result');
 
+function fetchProductData(url) {
 fetch(url)
     .then(response => response.json())
     .then(data => { 
@@ -51,3 +53,62 @@ fetch(url)
         <img src="${data.product.ecoscore_grade == null || data.product.ecoscore_grade == 'unknown' || data.product.ecoscore_grade == 'not-applicable' ? "img/Green/green-score-IDK.svg" : `img/Green/green-score-${data.product.ecoscore_grade}.svg`}" alt="PhotoGreenscore"></img>
       </div>`;
     }});
+};
+
+// scanner
+    window.addEventListener('load', function () {
+      let selectedDeviceId;
+      const codeReader = new ZXing.BrowserMultiFormatReader()
+      console.log('ZXing code reader initialized')
+      codeReader.listVideoInputDevices()
+        .then((videoInputDevices) => {
+          const sourceSelect = document.getElementById('sourceSelect')
+          selectedDeviceId = videoInputDevices[0].deviceId
+          if (videoInputDevices.length >= 1) {
+            videoInputDevices.forEach((element) => {
+              const sourceOption = document.createElement('option')
+              sourceOption.text = element.label
+              sourceOption.value = element.deviceId
+              sourceSelect.appendChild(sourceOption)
+            })
+            sourceSelect.onchange = () => {
+              selectedDeviceId = sourceSelect.value;
+            };
+            const sourceSelectPanel = document.getElementById('sourceSelectPanel')
+            sourceSelectPanel.style.display = 'block'
+          }
+          document.getElementById('startButton').addEventListener('click', () => {
+            codeReader.decodeFromVideoDevice(selectedDeviceId, 'video', (result, err) => {
+              if (result) {
+                console.log(result)
+                document.getElementById('result').textContent = result.text
+              }
+              if (err && !(err instanceof ZXing.NotFoundException)) {
+                console.error(err)
+                document.getElementById('result').textContent = err
+              }
+            })
+            console.log(`Started continous decode from camera with id ${selectedDeviceId}`)
+          })
+          document.getElementById('resetButton').addEventListener('click', () => {
+            codeReader.reset()
+            document.getElementById('result').textContent = '';
+            console.log('Reset.')
+          })
+        })
+        .catch((err) => {
+          console.error(err)
+        })
+    })
+
+   // Chargement initial (si "product" ou "result" est défini dans l'URL)
+let productOrResult = product || result;
+if (productOrResult) {
+    const url = createUrl(productOrResult);
+    fetchProductData(url);
+}
+
+// Fonction pour créer l'URL API
+function createUrl(code) {
+  return `https://world.openfoodfacts.org/api/v2/product/${code}`;
+}
