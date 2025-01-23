@@ -3,46 +3,59 @@
 }
 /* Corps général */
 body {
-	background-color: #F9FAFB;
+	background-color: #232323;
 	font-family: 'Poppins', sans-serif;
 	margin: 0;
 	padding: 0;
 	height: 100%;
   }
   
-  /* Header */
-  header {
-	background-color: #00C6AE;
+  /* Header h1 */
+  h1 {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 95%;
+	background-color: #3FCC7D;
 	color: #fff;
-	padding: 2rem;
+	padding: 0.5rem;
+	margin: 0 auto;
 	text-align: center;
 	border-bottom-left-radius: 2rem;
 	border-bottom-right-radius: 2rem;
   }
-  
+  /* nomProduit */
+  h2 {
+	color: #fff;
+	text-align: center;
+	background-color: #3FCC7D;
+	margin: 0;
+	padding: 1rem;
+	border-radius: 1rem;
+  }
+
   /* Barre de recherche */
   .barreDeRecherche {
-	background-color: #fff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	border-radius: 2rem;
 	padding: 1.5rem;
 	margin: 2rem auto;
-	width: 90%;
 	max-width: 40rem;
-	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   }
   
   .barreDeRecherche input {
-	width: 70%;
 	padding: 1rem;
 	border: none;
 	border-radius: 1rem;
 	margin-right: 1rem;
-	background-color: #F1F3F5;
+	background-color: #323232;
 	font-size: 1rem;
   }
   
   .barreDeRecherche button {
-	background-color: #00C6AE;
+	background-color: #3FCC7D;
 	color: white;
 	border: none;
 	border-radius: 1rem;
@@ -53,11 +66,12 @@ body {
   }
   
   .barreDeRecherche button:hover {
-	background-color: #00B39A;
+	background-color: #2eb468;
 	transform: scale(1.05);
   }
   
 .nomProduit {
+	color: #fff;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -71,7 +85,7 @@ body {
 	justify-content: center;
 	align-items: center;
 	text-align: center;
-	background-color: #fff;
+	background-color: #323232;;
 	border-radius: 1.5rem;
 	margin: 2rem auto;
 	margin-bottom: 4rem;
@@ -87,12 +101,26 @@ body {
 	align-items: center;
   }
 
+.photoProduit img {
+	border-radius: 1rem;
+}
+
   .informations h2 {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	font-weight: bold;
-	color: #333;
+	color: #fff;
+	font-size: 1.2rem;
+	margin-bottom: 1rem;
+  }
+
+  .informations h3 {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-weight: bold;
+	color: #fff;
 	font-size: 1.2rem;
 	margin-bottom: 1rem;
   }
@@ -103,7 +131,7 @@ body {
 		align-items: center;
 		text-align: center;
 		font-weight: initial;
-		color: #333;
+		color: #fff;
 		font-size: 1rem;
 		margin-bottom: 1rem;
 	  }
@@ -111,18 +139,14 @@ body {
   .informations img {
 	max-width: 100%;
   }
-  
-#novascore {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-}
 
   /* Footer */
 footer {
-
-	background-color: #00C6AE;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	align-content: center;
+	background-color: #3FCC7D;
 	color: #fff;
 	text-align: center;
 	height: 4rem;
@@ -130,11 +154,21 @@ footer {
 	border-top-right-radius: 2rem;
 	box-shadow: 4px 1px 1px 0px rgba(0, 0, 0, 0.1);
 	position: fixed;
-	width: 83%;
+	width: 90%;
 	bottom: 0;
-	left: 8.5%;
+	left: 5%;
 	}
   
+footer img {
+	cursor: pointer;
+	transition: transform 0.3s ease;
+  }
+
+footer img:hover {
+	transform: scale(1.1);
+  }
+
+
   /* Responsiveness */
   @media (min-width: 768px) {
 
