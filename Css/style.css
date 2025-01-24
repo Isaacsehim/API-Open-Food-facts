@@ -1,3 +1,4 @@
+
 * {
 	padding: 0;
 }
@@ -82,7 +83,6 @@ h2 {
 }
 
 .container a {
-
 	background-color: #3FCC7D;
 	color: white;
 	border: none;
@@ -129,17 +129,11 @@ video {
 }
 
 .resultat {
-	margin: 2rem;
-	padding: 1rem;
+	color: #323232;
 }
 
 #result {
-color: #3FCC7D;
-
-}
-
-label {
-
+	color: #3FCC7D;
 }
 
 /* Bloc des informations */
@@ -203,6 +197,33 @@ label {
 	max-width: 100%;
 }
 
+.nutriscore {
+	text-align: center;
+	background-color: #232323;
+	color: #fff;
+	padding: 1rem;
+	border-radius: 1rem;
+	margin: 1rem;
+}
+
+.novascore {
+	text-align: center;
+	background-color: #232323;
+	color: #fff;
+	padding: 1rem;
+	border-radius: 1rem;
+	margin: 1rem;
+}
+
+.greenscore {
+	text-align: center;
+	background-color: #232323;
+	color: #fff;
+	padding: 1rem;
+	border-radius: 1rem;
+	margin: 1rem;
+}
+
 /* Footer */
 footer {
 	display: flex;
@@ -231,7 +252,6 @@ footer img {
 footer img:hover {
 	transform: scale(1.1);
 }
-
 
 /* Responsiveness */
 @media (min-width: 768px) {

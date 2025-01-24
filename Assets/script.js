@@ -81,7 +81,7 @@ fetch(url)
             codeReader.decodeFromVideoDevice(selectedDeviceId, 'video', (result, err) => {
               if (result) {
                 console.log(result)
-                document.getElementById('result').textContent = result.text
+                document.location.href = "index.html?product=" + result;
               }
               if (err && !(err instanceof ZXing.NotFoundException)) {
                 console.error(err)
@@ -112,3 +112,13 @@ if (productOrResult) {
 function createUrl(code) {
   return `https://world.openfoodfacts.org/api/v2/product/${code}`;
 }
+
+// Faire défiler en douceur vers le haut
+const boutonRemonte = document.querySelector('.bouttonremonte');
+boutonRemonte.addEventListener('click', function(event) {
+  event.preventDefault();
+      window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+});
