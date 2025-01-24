@@ -82,6 +82,8 @@ fetch(url)
               if (result) {
                 console.log(result)
                 document.location.href = "index.html?product=" + result;
+                const son = new Audio("beep.mp3");
+                son.play();
               }
               if (err && !(err instanceof ZXing.NotFoundException)) {
                 console.error(err)
