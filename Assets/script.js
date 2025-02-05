@@ -2,6 +2,7 @@
 const urlParams = new URLSearchParams(window.location.search);
 let product = urlParams.get('product');
 let result = urlParams.get('result');
+const son = new Audio("beep.mp3");
 
 function fetchProductData(url) {
 fetch(url)
@@ -12,6 +13,7 @@ fetch(url)
         if (data.status == 0 && product != null && product != "") {
             document.getElementById('nomProduit').innerText = "Produit non trouvé ou mauvais numéro de code-barre";
         } else {
+          son.play();
     document.getElementById('informations').innerHTML =`<div class="nomProduit" id="nomProduit">
         <h2>${data.product.product_name}</h2>
       </div>
@@ -81,9 +83,8 @@ fetch(url)
             codeReader.decodeFromVideoDevice(selectedDeviceId, 'video', (result, err) => {
               if (result) {
                 console.log(result)
+                son.play();
                 document.location.href = "index.html?product=" + result;
-                const son = new Audio("beep.mp3");
-                son.play(url);
               }
               if (err && !(err instanceof ZXing.NotFoundException)) {
                 console.error(err)
